@@ -2,6 +2,10 @@
 
 Travel-mood is a modern, dynamic React application designed to help users discover and explore travel destinations. The project features a premium glassmorphic UI, responsive design, and an integrated search system managed via React Context.
 
+<img src="src/assets/main-view.png" alt="Foto pantalla principal" width="300"/>
+
+<img src="src/assets/detail-view.png" alt="Foto pantalla de detalle" width="300"/>
+
 ## ✨ Features
 
 - **Destination Discovery**: Browse through a curated list of travel destinations globally.

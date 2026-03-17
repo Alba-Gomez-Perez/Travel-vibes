@@ -6,7 +6,7 @@
         "continent": "Asia",
         "type": "City",
         "climate": "Templado",
-        "budget": 3,
+        "budget": 3.300,
         "bestSeason": "Spring",
         "tags": [
             "cultura",
@@ -24,7 +24,7 @@
         "continent": "Europe",
         "type": "Nature",
         "climate": "Cold",
-        "budget": 3,
+        "budget": 2.200,
         "bestSeason": "Winter",
         "tags": [
             "naturaleza",
@@ -36,31 +36,13 @@
         "description": "Capital islandesa rodeada de volcanes, géiseres y auroras boreales, ideal para amantes de la naturaleza y paisajes únicos."
     },
     {
-        "id": 3,
-        "city": "Barcelona",
-        "country": "Spain",
-        "continent": "Europe",
-        "type": "Beach",
-        "climate": "Warm",
-        "budget": 2,
-        "bestSeason": "Summer",
-        "tags": [
-            "fiesta",
-            "playa",
-            "gastronomia"
-        ],
-        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/3b/2b/bd/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_b88493a7b5839ec4d5b8",
-        "airportCode": "BCN",
-        "description": "Destino mediterráneo que combina playas, arquitectura modernista y una vibrante vida nocturna."
-    },
-    {
         "id": 4,
         "city": "New York",
         "country": "USA",
         "continent": "North America",
         "type": "City",
         "climate": "Templado",
-        "budget": 3,
+        "budget": 2.350,
         "bestSeason": "Autumn",
         "tags": [
             "shopping",
@@ -78,7 +60,7 @@
         "continent": "Asia",
         "type": "Beach",
         "climate": "Hot",
-        "budget": 1,
+        "budget": 2.700,
         "bestSeason": "Summer",
         "tags": [
             "relax",
@@ -96,7 +78,7 @@
         "continent": "Europe",
         "type": "City",
         "climate": "Templado",
-        "budget": 3,
+        "budget": 1.480,
         "bestSeason": "Spring",
         "tags": [
             "romantico",
@@ -114,7 +96,7 @@
         "continent": "Europe",
         "type": "City",
         "climate": "Warm",
-        "budget": 2,
+        "budget": 1.250,
         "bestSeason": "Spring",
         "tags": [
             "cultura",
@@ -132,7 +114,7 @@
         "continent": "Oceania",
         "type": "Beach",
         "climate": "Warm",
-        "budget": 3,
+        "budget": 4.300,
         "bestSeason": "Summer",
         "tags": [
             "surf",
@@ -150,7 +132,7 @@
         "continent": "South America",
         "type": "Beach",
         "climate": "Hot",
-        "budget": 2,
+        "budget": 2.700,
         "bestSeason": "Summer",
         "tags": [
             "fiesta",
@@ -168,7 +150,7 @@
         "continent": "Asia",
         "type": "City",
         "climate": "Hot",
-        "budget": 3,
+        "budget": 3.100,
         "bestSeason": "Winter",
         "tags": [
             "shopping",
