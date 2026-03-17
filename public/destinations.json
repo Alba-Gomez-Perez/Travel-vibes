@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "city": "Tokyo",
+        "country": "Japan",
+        "continent": "Asia",
+        "type": "City",
+        "climate": "Templado",
+        "budget": 3.300,
+        "bestSeason": "Spring",
+        "tags": [
+            "cultura",
+            "gastronomia",
+            "tecnologia"
+        ],
+        "image": "https://content-viajes.nationalgeographic.com.es/medio/2024/09/03/tokio_133ce43a_1284581217_240903122054_1280x854.jpg",
+        "airportCode": "HND",
+        "description": "Una metrópolis futurista donde los rascacielos conviven con templos tradicionales, famosa por su gastronomía, tecnología y cultura pop."
+    },
+    {
+        "id": 2,
+        "city": "Reykjavik",
+        "country": "Iceland",
+        "continent": "Europe",
+        "type": "Nature",
+        "climate": "Cold",
+        "budget": 2.200,
+        "bestSeason": "Winter",
+        "tags": [
+            "naturaleza",
+            "relax",
+            "aventura"
+        ],
+        "image": "https://content.icelandtravel.is/wp-content/uploads/2019/03/Reykjavik.jpg",
+        "airportCode": "KEF",
+        "description": "Capital islandesa rodeada de volcanes, géiseres y auroras boreales, ideal para amantes de la naturaleza y paisajes únicos."
+    },
+    {
+        "id": 4,
+        "city": "New York",
+        "country": "USA",
+        "continent": "North America",
+        "type": "City",
+        "climate": "Templado",
+        "budget": 2.350,
+        "bestSeason": "Autumn",
+        "tags": [
+            "shopping",
+            "cultura",
+            "urbano"
+        ],
+        "image": "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+        "airportCode": "JFK",
+        "description": "La ciudad que nunca duerme, famosa por su skyline, Broadway, Central Park y diversidad cultural."
+    },
+    {
+        "id": 5,
+        "city": "Bali",
+        "country": "Indonesia",
+        "continent": "Asia",
+        "type": "Beach",
+        "climate": "Hot",
+        "budget": 2.700,
+        "bestSeason": "Summer",
+        "tags": [
+            "relax",
+            "romantico",
+            "naturaleza"
+        ],
+        "image": "https://cdn.audleytravel.com/2478/1770/79/16027396-pura-ulun-danu-bratan-bali.jpg",
+        "airportCode": "DPS",
+        "description": "Isla paradisíaca conocida por sus templos, arrozales y playas de arena blanca."
+    },
+    {
+        "id": 6,
+        "city": "Paris",
+        "country": "France",
+        "continent": "Europe",
+        "type": "City",
+        "climate": "Templado",
+        "budget": 1.480,
+        "bestSeason": "Spring",
+        "tags": [
+            "romantico",
+            "cultura",
+            "gastronomia"
+        ],
+        "image": "https://res.cloudinary.com/lastminute-contenthub/s--gtnh6sBr--/c_limit,h_999999,w_1920/f_auto/q_auto:eco/v1/DAM/Photos/Destinations/Europe/France/Paris/shutterstock_112137761",
+        "airportCode": "CDG",
+        "description": "La ciudad del amor, famosa por la Torre Eiffel, su arte, gastronomía y elegantes avenidas."
+    },
+    {
+        "id": 7,
+        "city": "Rome",
+        "country": "Italy",
+        "continent": "Europe",
+        "type": "City",
+        "climate": "Warm",
+        "budget": 1.250,
+        "bestSeason": "Spring",
+        "tags": [
+            "cultura",
+            "gastronomia",
+            "historia"
+        ],
+        "image": "https://content-viajes.nationalgeographic.com.es/medio/2024/09/13/coliseo_37c26845_240913142611_1200x800.jpg",
+        "airportCode": "FCO",
+        "description": "Ciudad eterna repleta de historia, ruinas antiguas y una de las mejores gastronomías del mundo."
+    },
+    {
+        "id": 8,
+        "city": "Sydney",
+        "country": "Australia",
+        "continent": "Oceania",
+        "type": "Beach",
+        "climate": "Warm",
+        "budget": 4.300,
+        "bestSeason": "Summer",
+        "tags": [
+            "surf",
+            "playa",
+            "naturaleza"
+        ],
+        "image": "https://cdn.sanity.io/images/nxpteyfv/goguides/ec900c99793f50b69dc76672c4c1d69e2638576e-1600x1066.jpg",
+        "airportCode": "SYD",
+        "description": "Destino costero con playas icónicas y la famosa Ópera de Sídney junto al puerto."
+    },
+    {
+        "id": 9,
+        "city": "Rio de Janeiro",
+        "country": "Brazil",
+        "continent": "South America",
+        "type": "Beach",
+        "climate": "Hot",
+        "budget": 2.700,
+        "bestSeason": "Summer",
+        "tags": [
+            "fiesta",
+            "playa",
+            "naturaleza"
+        ],
+        "image": "https://i.content4travel.com/seeplaces/temp/9ecc4378-3201-4070-89e8-de66534c9d9c.jpg",
+        "airportCode": "GIG",
+        "description": "Ciudad vibrante entre montañas y mar, conocida por el Cristo Redentor y el Carnaval."
+    },
+    {
+        "id": 10,
+        "city": "Dubai",
+        "country": "UAE",
+        "continent": "Asia",
+        "type": "City",
+        "climate": "Hot",
+        "budget": 3.100,
+        "bestSeason": "Winter",
+        "tags": [
+            "shopping",
+            "lujo",
+            "playa"
+        ],
+        "image": "https://www.civitatis.com/blog/wp-content/uploads/2025/06/shutterstock_1711382014.jpg",
+        "airportCode": "DXB",
+        "description": "Metrópolis futurista en el desierto famosa por el Burj Khalifa, el lujo y sus centros comerciales."
+    }
+]
