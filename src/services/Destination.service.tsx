@@ -15,3 +15,12 @@ export const handleBudgetLog = (destination: Destination) => {
 
     return BudgetType.LUXURY;
 };
+
+export async function getAllDestinations() {
+    const res = await fetch("/destinations.json");
+    if (!res.ok) {
+        throw new Error("Error al cargar destinations.json");
+    }
+
+    return await res.json();
+}

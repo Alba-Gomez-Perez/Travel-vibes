@@ -1,5 +1,6 @@
 import {createContext, useContext, useEffect, useMemo, useState} from "react";
 import { Destination } from "../types/Destination";
+import {getAllDestinations} from "../services/Destination.service";
 
 const DestinationContext = createContext<any | undefined>(undefined);
 
@@ -12,15 +13,13 @@ export function DestinationProvider({ children }: { children: React.ReactNode })
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    //TODO: LLEVAR EL THEN AL SERVICIO
     useEffect(() => {
-        fetch("/destinations.json")
-            .then((res) => res.json())
-            .then((data) => {
-                setDestinations(data);
-                setFilteredDestinations(data);
-                setLoading(false);
-            })
+        getAllDestinations()
+        .then((data) => {
+            setDestinations(data);
+            setFilteredDestinations(data);
+            setLoading(false);
+        })
             .catch((err) => {
                 console.error("Error cargando JSON:", err);
                 setError(err);
