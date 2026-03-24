@@ -1,7 +1,9 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {createContext, useContext, useEffect, useMemo, useState} from "react";
 import { Destination } from "../types/Destination";
 
 const DestinationContext = createContext<any | undefined>(undefined);
+
+export const useDestinationContext = () => useContext(DestinationContext)
 
 export function DestinationProvider({ children }: { children: React.ReactNode }) {
     const [destinations, setDestinations] = useState<Destination[]>([]);
@@ -10,6 +12,7 @@ export function DestinationProvider({ children }: { children: React.ReactNode })
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    //TODO: LLEVAR EL THEN AL SERVICIO
     useEffect(() => {
         fetch("/destinations.json")
             .then((res) => res.json())
@@ -33,22 +36,18 @@ export function DestinationProvider({ children }: { children: React.ReactNode })
         setFilteredDestinations(filtered);
     };
 
+    const value = useMemo(() => ({
+        filteredDestinations,
+        selectedDestination,
+        setSelectedDestination,
+        searchDestinations,
+        loading,
+        error
+    }), [filteredDestinations, selectedDestination, setSelectedDestination, searchDestinations, loading, error])
+
     return (
-        <DestinationContext.Provider
-            value={{
-                filteredDestinations,
-                selectedDestination,
-                setSelectedDestination,
-                searchDestinations,
-                loading,
-                error,
-            }}
-        >
+        <DestinationContext.Provider value={value}>
             {children}
         </DestinationContext.Provider>
     );
-}
-
-export function useDestinations() {
-    return useContext(DestinationContext);
 }

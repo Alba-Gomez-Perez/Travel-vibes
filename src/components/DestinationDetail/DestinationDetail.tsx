@@ -1,13 +1,13 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { useDestinations } from "../contexts/DestinationContext";
+import { useDestinationContext } from "../../contexts/DestinationContext";
 import "./DestinationDetail.css";
-import type { Destination } from "../types/Destination";
+import type { Destination } from "../../types/Destination";
 
 export const DestinationDetail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { filteredDestinations } = useDestinations();
+    const { filteredDestinations } = useDestinationContext();
 
     const destination = filteredDestinations.find((destination: Destination) => destination.id === Number(id));
 
@@ -60,5 +60,3 @@ export const DestinationDetail = () => {
         </div>
     );
 };
-
-export default DestinationDetail;

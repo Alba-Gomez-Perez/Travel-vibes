@@ -63,7 +63,7 @@ In the project directory, you can run:
 
 ## 🗂️ Project Structure
 
-- `src/components/`: Reusable UI components (e.g., `Hero`, `DestinationList`, `DestinationCard`).
+- `src/components/`: Reusable UI components (e.g., `Header`, `DestinationList`, `DestinationCard`).
 - `src/contexts/`: React Context providers for global state management (e.g., `DestinationContext`).
 - `src/tests/`: Jest unit test files.
 - `src/assets/`: Static files like images and icons.

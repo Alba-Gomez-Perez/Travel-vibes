@@ -3,7 +3,7 @@
     width: 100%;
     height: 20vh;
     min-height: 200px;
-    background-image: url('../assets/desert_hero_bg.png');
+    background-image: url('../../assets/desert_hero_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;

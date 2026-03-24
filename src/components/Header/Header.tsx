@@ -1,10 +1,9 @@
-import React from 'react';
-import './Hero.css';
+import './Header.css';
 import { Search } from 'lucide-react';
-import { useDestinations } from '../contexts/DestinationContext';
+import { useDestinationContext } from '../../contexts/DestinationContext';
 
-const Hero = () => {
-    const { searchDestinations } = useDestinations();
+export const Header = () => {
+    const { searchDestinations } = useDestinationContext();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -30,4 +29,3 @@ const Hero = () => {
     );
 };
 
-export default Hero;

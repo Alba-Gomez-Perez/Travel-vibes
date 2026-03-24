@@ -1,12 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { Destination } from "../types/Destination";
-import DestinationCard from './DestinationCard';
-import { useDestinations } from "../contexts/DestinationContext";
-import errorImage from "../assets/error.png";
-
+import { Destination } from "../../types/Destination";
+import { DestinationCard } from '../DestinationCard/DestinationCard';
+import { useDestinationContext } from "../../contexts/DestinationContext";
+import errorImage from "../../assets/error.png";
 
 export const DestinationList = () => {
-    const { filteredDestinations } = useDestinations();
+    const { filteredDestinations } = useDestinationContext();
     const navigate = useNavigate();
 
     return (
@@ -31,5 +30,3 @@ export const DestinationList = () => {
         </div>
     );
 };
-
-export default DestinationList;

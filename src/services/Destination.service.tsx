@@ -1,10 +1,6 @@
 import { Destination } from "../types/Destination";
+import { BudgetType } from "../types/Budget";
 
-export enum BudgetType {
-    BUDGET = "Budget",
-    PREMIUM_ECONOMY = "Premium Economy",
-    LUXURY = "Luxury"
-}
 
 export const handleBudgetLog = (destination: Destination) => {
     const budget = destination.budget * 1000;

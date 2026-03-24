@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import type { Destination } from '../types/Destination.tsx';
-import { handleBudgetLog } from '../services/Destination.service.tsx';
+import type { Destination } from '../../types/Destination';
+import { handleBudgetLog } from '../../services/Destination.service';
 
 type Prop = {
     destination: Destination;
@@ -39,5 +39,3 @@ export const DestinationCard: FC<Prop> = ({ destination, onClick }) => {
         </div>
     );
 }
-
-export default DestinationCard;
