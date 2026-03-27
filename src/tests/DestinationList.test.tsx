@@ -1,17 +1,19 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
-import { DestinationProvider } from "../contexts/DestinationContext";
+import { DestinationProvider } from "../contexts/DestinationContext.tsx";
 import { DestinationList } from "../components/DestinationList/DestinationList.tsx";
 
 // Mock del provider para usar datos fijos
-const MockProvider = ({ children }) => (
+const MockProvider = ({ children }: { children: React.ReactNode }) => (
     <MemoryRouter>
         <DestinationProvider>
             {children}
         </DestinationProvider>
     </MemoryRouter>
 );
+
+const unmockedFetch = global.fetch;
 
 beforeEach(() => {
     global.fetch = jest.fn(() =>
@@ -22,17 +24,18 @@ beforeEach(() => {
                 { id: 2, city: "Paris", country: "France", timezone: "CET", budget: 1500, best_time_to_visit: "Summer", imageUrl: "", rating: 4.7 }
             ])
         })
-    );
+    ) as jest.Mock;
 });
 
 afterEach(() => {
+    global.fetch = unmockedFetch;
     jest.restoreAllMocks();
 });
 
 describe("DestinationList Component", () => {
 
     test("Render empty list", async () => {
-        global.fetch.mockImplementationOnce(() =>
+        (global.fetch as jest.Mock).mockImplementationOnce(() =>
             Promise.resolve({
                 ok: true,
                 json: () => Promise.resolve([])
