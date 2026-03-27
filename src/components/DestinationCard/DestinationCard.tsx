@@ -1,22 +1,56 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
+import { Heart } from 'lucide-react';
 import type { Destination } from '../../types/Destination';
 import { handleBudgetLog } from '../../services/Destination.service';
-
 type Prop = {
     destination: Destination;
     onClick: (id: number) => void;
 }
 export const DestinationCard: FC<Prop> = ({ destination, onClick }) => {
 
+    const [isFavorite, setIsFavorite] = useState<boolean>(() => {
+        const saved = localStorage.getItem("favoritesDestinations");
+        if (saved) {
+            const favs: number[] = JSON.parse(saved);
+            return favs.includes(destination.id);
+        }
+        return false;
+    });
+
     const onMoreInfoClick = () => {
         onClick(destination.id);
     };
+
+    function addFavorite(id: number) {
+        const saved = localStorage.getItem("favoritesDestinations");
+        let currentFavorites: number[] = saved ? JSON.parse(saved) : [];
+
+        if (currentFavorites.includes(id)) {
+            // Remove from favorites
+            currentFavorites = currentFavorites.filter(favId => favId !== id);
+            setIsFavorite(false);
+        } else {
+            // Add to favorites
+            currentFavorites.push(id);
+            setIsFavorite(true);
+        }
+
+        localStorage.setItem("favoritesDestinations", JSON.stringify(currentFavorites));
+    }
 
     return (
         <div className="card">
             <div className="card-image-container">
                 <div className="image-wrapper">
                     <img src={destination.image} alt={destination.city} className="card-image" />
+                    <button
+                        onClick={() => addFavorite(destination.id)}
+                        className="heart-btn"
+                        aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+                        style={{ color: isFavorite ? "#c35e2b" : "white" }}
+                    >
+                        <Heart size={20} fill={isFavorite ? "currentColor" : "none"} />
+                    </button>
                     <h3 className="city-name">{destination.city}</h3>
                 </div>
             </div>
