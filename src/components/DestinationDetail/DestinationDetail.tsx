@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useDestinationContext } from "../../contexts/DestinationContext";
 import "./DestinationDetail.css";
 import type { Destination } from "../../types/Destination";
+import errorImage from "../../assets/error.png";
 
 export const DestinationDetail = () => {
     const { id } = useParams();
@@ -14,12 +15,16 @@ export const DestinationDetail = () => {
     if (!destination) {
         return (
             <div className="destinations-container">
-                <div className="detail-view">
-                    <p>Destination not found.</p>
-                    <button className="icon-btn" onClick={() => navigate("/")}>
-                        <ArrowLeft size={24} /> Back to list
-                    </button>
+                <div className="no-results">
+                    <img
+                        src={errorImage}
+                        alt="No hay destinos"
+                        className="error-image"
+                    />
                 </div>
+                <button className="icon-btn" onClick={() => navigate("/")}>
+                    <ArrowLeft size={24} /> Back to list
+                </button>
             </div>
         );
     }
